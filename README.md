@@ -24,10 +24,10 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 
 ## 🧠 What Makes This Project Powerful?
 
-✔ Dynamic team form (real match momentum)  
 ✔ Probabilistic match simulation  
 ✔ Monte Carlo season modeling  
-✔ Multiple ML models (XGBoost, RF, etc.)  
+✔ Multiple ML models (XGBoost, RF, LightGBM)  
+✔ Dynamic team form tracking  
 ✔ IPL-themed visual storytelling  
 
 ---
@@ -40,7 +40,7 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 
 ### 🔴 **Predicted IPL 2026 Winner: RCB**
 
-> Based on 1000+ Monte Carlo simulations and ML predictions
+> Based on 1000+ Monte Carlo simulations and ML predictions  
 
 ---
 
@@ -48,21 +48,21 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 
 ### 🔥 Points Table Prediction
 <p align="center">
-  <img src="assets/points_table.png" width="800"/>
+  <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e" width="800"/>
 </p>
 
 ---
 
 ### 📈 Win Probability Distribution
 <p align="center">
-  <img src="assets/win_probability.png" width="800"/>
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" width="800"/>
 </p>
 
 ---
 
 ### 📉 Team Performance Trends (2008–2025)
 <p align="center">
-  <img src="assets/team_trends.png" width="800"/>
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" width="800"/>
 </p>
 
 ---
@@ -92,7 +92,7 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 
 ### Match Simulation
 - Predict win probability  
-- Randomized outcome (realistic)  
+- Randomized outcome (realistic simulation)  
 - Update team form dynamically  
 
 ### Season Simulation
@@ -101,7 +101,7 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 
 ### Monte Carlo Simulation
 - 1000+ season runs  
-- Compute championship probability  
+- Championship probability estimation  
 
 ---
 
@@ -110,7 +110,7 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 📌 Source:  
 👉 https://www.kaggle.com/code/arbazkhan971/indian-premier-league-analysis-2008-2025  
 
-⚠️ Dataset not included due to size.
+⚠️ Dataset not included due to size constraints.
 
 ---
 
