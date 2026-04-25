@@ -1,52 +1,58 @@
 # 🏏 IPL Prediction Engine 2026  
-### ⚡ Machine Learning + Simulation + Data Science
+### ⚡ End-to-End Machine Learning + Simulation System
 
 ---
 
 ## 🚀 Overview
 
-This project builds a **full IPL prediction engine** using historical ball-by-ball data (2008–2025) to:
+This project builds a **complete IPL prediction engine** using historical ball-by-ball data (2008–2025).
 
-- Predict match outcomes  
-- Simulate full IPL seasons  
-- Estimate winning probabilities  
-- Identify the **IPL 2026 Champion**  
+Instead of simple classification, it models the IPL as a **probabilistic system**, where:
 
----
+- Every match outcome is predicted using ML  
+- Entire seasons are simulated match-by-match  
+- Team strength evolves dynamically (form tracking)  
+- Final winners are derived using **Monte Carlo simulation**
 
-## 🧠 Key Highlights
-
-✔ Probabilistic match simulation  
-✔ Monte Carlo season modeling  
-✔ Multiple ML models (XGBoost, Random Forest, LightGBM)  
-✔ Dynamic team form tracking  
-✔ Feature-driven predictions  
+👉 This makes the system closer to **real-world uncertainty modeling**, not just static prediction.
 
 ---
 
 ## 🏆 Final Prediction
 
-### 🔴 **Predicted IPL 2026 Winner: RCB**
-
-> Based on 1000+ Monte Carlo simulations and trained ML models
+### 🔴 Predicted IPL 2026 Winner: **RCB**  
+> Derived from 1000+ simulated seasons using probability-based match outcomes
 
 ---
 
-## 📊 Model Outputs
+## 🧠 Key Capabilities
 
-- Predicted Points Table (Full Season Simulation)  
-- Win Probability Distribution (All Teams)  
-- Team Performance Trends (2008–2025)  
+- 📊 **Match-Level Prediction**  
+  Uses trained ML model (`predict_proba`) to estimate win probability  
+
+- 🔁 **Dynamic Team Form**  
+  Rolling performance (last 5 matches) updates during simulation  
+
+- 🧮 **Season Simulation Engine**  
+  Recreates full IPL schedule and generates realistic points table  
+
+- 🎯 **Monte Carlo Simulation**  
+  Runs 1000+ seasons to compute championship probability distribution  
+
+- 🤖 **Multi-Model Training**  
+  Compares multiple ML algorithms and selects best performer  
 
 ---
 
 ## 🧪 Machine Learning Pipeline
 
 ### 🔹 Feature Engineering
-- Team win rate  
+- Team win rate (historical strength)  
 - Head-to-head performance  
-- Rolling form (last 5 matches)  
-- Toss advantage  
+- Rolling form (momentum)  
+- Toss advantage (neutral baseline)
+
+---
 
 ### 🔹 Models Used
 - Logistic Regression  
@@ -55,41 +61,71 @@ This project builds a **full IPL prediction engine** using historical ball-by-ba
 - XGBoost  
 - LightGBM  
 
-📌 Best model selected using:
-- Accuracy  
-- Log Loss  
+---
+
+### 🔹 Model Selection Strategy
+- Accuracy (classification performance)  
+- Log Loss (probability calibration — critical for simulation)
 
 ---
 
-## 🔁 Simulation Engine
+## 🔁 Simulation Logic
 
-### Match Simulation
-- Uses predicted probabilities  
-- Randomized realistic outcomes  
-- Dynamic form updates after each match  
+### Match Prediction
+- Input: team1 vs team2 features  
+- Output: probability (team1 wins)  
+- Winner sampled probabilistically (not deterministic)
 
-### Season Simulation
-- Complete IPL schedule simulation  
-- Points table generation  
+---
 
-### Monte Carlo Simulation
-- 1000+ full season runs  
-- Championship probability estimation  
+### Season Engine
+- Uses real IPL schedule  
+- Updates team form after each match  
+- Builds dynamic points table  
+
+---
+
+### Monte Carlo Layer
+- Repeat season simulation 1000+ times  
+- Count how often each team wins  
+- Convert to **win probability (%)**
+
+---
+
+## 📊 Outputs Generated
+
+- 📌 Predicted Points Table  
+- 📌 Team-wise Win Probability (%)  
+- 📌 Historical Performance Trends  
 
 ---
 
 ## 📂 Dataset
 
-📌 Source:  
+📥 Source:  
 https://www.kaggle.com/code/arbazkhan971/indian-premier-league-analysis-2008-2025  
 
-⚠️ Dataset not included in this repository due to size limitations.
+⚠️ Dataset is not included due to size constraints.
 
 ---
 
-## ⚙️ Setup
+## ⚙️ Setup & Run (All Steps in One)
 
 ```bash
+# 1️⃣ Clone repository
 git clone https://github.com/your-username/IPL-Prediction.git
 cd IPL-Prediction
+
+# 2️⃣ Install dependencies
 pip install -r requirements.txt
+
+# 3️⃣ Download dataset from Kaggle
+# → Extract CSV
+
+# 4️⃣ Place dataset here:
+# data/raw/IPL.csv
+
+# 5️⃣ Run notebook
+jupyter notebook
+# Open → notebooks/TRAINING.ipynb
+# Run all cells
